@@ -1,22 +1,13 @@
 const http = require('http');
-const server =http.createServer((req,res)=>{
-const url=req.url;
-if(req==='/'){
-    res.setHeader('Contax-Type','text/html');
-    res.write('<html>');
-    res.write('<head><title>do some shit</title></head>');
-    res.write('<body><from action="/massage" method="POST"><input type="text" "name=message">button type="submit"></from></button></body>');
-    res.write('</html>');
-    res.end();
-return res.end();
-}
 
-
-// res.setHeader('Contax-Type','text/html');
-// res.write('<html>');
-// res.write('<head><title>may page</title></head>');
-// res.write('<body><h1>hello</h1></body>');
-// res.write('</html>');
-
+const  server = http.createServer((req, res) => {
+console.log(req.url, req.headers , req.method);
+res.setHeader('content-Type', 'text/html');
+res.write('<html>');
+res.write('<head><title>HI</title></head>');
+res.write('<body><h1>hello sir</h1></body>');
+res.write('</html>');
+res.end();
 });
-server.listen(3000)
+
+server.listen(8000);
