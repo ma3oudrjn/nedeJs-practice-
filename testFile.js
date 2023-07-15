@@ -15,11 +15,11 @@ const Method=req.method;
 
  if (Url ==='/message' && Method ==='POST'){
     let allData=[];
-    fs.writeFileSync('message.txt','hiiiiii');
+    fs.writeFileSync('message.txt', message);
     res.statusCode = 302;
-    res.setHeader('LOcation','/')
+    res.setHeader('location','/')
     req.on('data',(chunk) =>{
-        console.log(chunk);
+        console.log(chunk); 
  allData.push(chunk);
     });
 
