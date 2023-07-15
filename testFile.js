@@ -5,15 +5,15 @@ const server =http.createServer((req ,res)=>{
 const Url=req.url;
 const Method=req.method;
 
- if (Url=== '/'){
+ if (Url === '/'){
     res.write('<html>')
     res.write('<head><title>heloo</title></head>')
     res.write('<body><form action="/message" method="POST"><input type="text>"><button type="submit">Send</button></input></form></body>')
     res.write('</html>')
     return res.end(); 
  }
-
- if (Url ==='/message' && Method ==='POST'){
+//  && Method ==='POST'
+ if (Url ==='/message' ){
     let allData=[];
     fs.writeFileSync('message.txt', message);
     res.statusCode = 302;
